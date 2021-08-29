@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project 1",
+      "description": "Project 1 description",
+      "projectType": "web",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "description": "Project 2 description",
+      "projectType": "games",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "description": "Project 3 description",
+      "projectType": "client",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Project 4",
+      "description": "Project 4 description",
+      "projectType": "web",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Project 5",
+      "description": "Project 5 description",
+      "projectType": "client",
+      "completed": false
+    }
+  ]
+}

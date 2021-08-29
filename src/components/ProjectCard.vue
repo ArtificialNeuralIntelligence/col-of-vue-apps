@@ -1,15 +1,24 @@
 <template>
-  <div class="project">
+  <div class="project" :class="project.completed ? 'complete' : ''">
     <div class="actions">
-      <h3 @click="showDesc = !showDesc">Project title</h3>
+      <h3 @click="showDesc = !showDesc">{{ project.title }}</h3>
+      - <small>{{ project.projectType }}</small>
       <div class="icons">
         <span class="material-icons">edit</span>
         <span class="material-icons">delete</span>
-        <span class="material-icons">done</span>
+        <span
+          v-if="project.completed"
+          class="material-icons"
+          @click="handledone(project.id)"
+          >cancel</span
+        >
+        <span v-else class="material-icons" @click="handledone(project.id)"
+          >done</span
+        >
       </div>
     </div>
     <div class="desc" v-show="showDesc">
-      <p>Project description</p>
+      <p>{{ project.description }}</p>
     </div>
   </div>
 </template>
@@ -17,10 +26,21 @@
 <script>
 export default {
   name: "ProjectCard",
+  props: {
+    project: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       showDesc: false,
     };
+  },
+  methods: {
+    handledone(id) {
+      this.$emit("handledone", id);
+    },
   },
 };
 </script>
