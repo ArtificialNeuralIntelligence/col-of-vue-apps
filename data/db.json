@@ -5,7 +5,7 @@
       "title": "Project 1",
       "description": "Project 1 description",
       "projectType": "web",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
@@ -17,22 +17,15 @@
     {
       "id": 3,
       "title": "Project 3",
-      "description": "Project 3 description",
-      "projectType": "client",
-      "completed": false
+      "projectType": "web",
+      "description": "A new way of solving issues",
+      "completed": true
     },
     {
       "id": 4,
-      "title": "Project 4",
-      "description": "Project 4 description",
-      "projectType": "web",
-      "completed": false
-    },
-    {
-      "id": 5,
       "title": "Project 5",
-      "description": "Project 5 description",
-      "projectType": "client",
+      "projectType": "games",
+      "description": "Lara vanga gude ganja",
       "completed": false
     }
   ]

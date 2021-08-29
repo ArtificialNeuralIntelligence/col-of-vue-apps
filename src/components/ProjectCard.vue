@@ -5,7 +5,9 @@
       - <small>{{ project.projectType }}</small>
       <div class="icons">
         <span class="material-icons">edit</span>
-        <span class="material-icons">delete</span>
+        <span class="material-icons" @click="handledelete(project.id)"
+          >delete</span
+        >
         <span
           v-if="project.completed"
           class="material-icons"
@@ -32,6 +34,7 @@ export default {
       required: true,
     },
   },
+  emits: ["handledone", "handledelete"],
   data() {
     return {
       showDesc: false,
@@ -40,6 +43,9 @@ export default {
   methods: {
     handledone(id) {
       this.$emit("handledone", id);
+    },
+    handledelete(id) {
+      this.$emit("handledelete", id);
     },
   },
 };
