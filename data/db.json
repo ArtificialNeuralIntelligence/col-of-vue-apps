@@ -5,7 +5,7 @@
       "title": "Vue todo app",
       "description": "For purpose of vue learning and practicing a legacy todo app ...",
       "projectType": "web",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
@@ -16,16 +16,30 @@
     },
     {
       "id": 3,
-      "title": "Project 3",
+      "title": "Ethereum NFT",
       "projectType": "client",
-      "description": "A new way of solving issues",
+      "description": "NFT smart contract work from fiverr client.",
       "completed": false
     },
     {
       "id": 4,
-      "title": "Project 5",
+      "title": "Typo",
       "projectType": "books",
-      "description": "Lara vanga gude ganja",
+      "description": "Learning Touch Typing",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Composition API",
+      "projectType": "web",
+      "description": "Learning new concept on vue3 composition api ..",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Project 0",
+      "projectType": "books",
+      "description": "Writing a book on project zero day hack",
       "completed": false
     }
   ]
