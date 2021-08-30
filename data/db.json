@@ -2,29 +2,29 @@
   "projects": [
     {
       "id": 1,
-      "title": "Project 1",
-      "description": "Project 1 description",
+      "title": "Vue todo app",
+      "description": "For purpose of vue learning and practicing a legacy todo app ...",
       "projectType": "web",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
-      "title": "Project 2",
-      "description": "Project 2 description",
+      "title": "Ant Story",
+      "description": "A game based on life of an ant who rescues his entire colony ...",
       "projectType": "games",
       "completed": false
     },
     {
       "id": 3,
       "title": "Project 3",
-      "projectType": "web",
+      "projectType": "client",
       "description": "A new way of solving issues",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
       "title": "Project 5",
-      "projectType": "games",
+      "projectType": "books",
       "description": "Lara vanga gude ganja",
       "completed": false
     }

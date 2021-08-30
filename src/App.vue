@@ -7,6 +7,7 @@
     @handledone="handledone"
     @handledelete="handledelete"
     @handlesubmit="handlesubmit"
+    @handleeditsubmit="handleeditsubmit"
   />
 </template>
 <script>
@@ -51,6 +52,22 @@ export default {
       // add the project on db.json
       axios
         .post("http://localhost:3000/projects", projectObject)
+        .catch((err) => console.log(err));
+      // re route to project list
+      this.$router.push({ name: "projectlist" });
+    },
+    handleeditsubmit(projectObject) {
+      // get desired item index from the array
+      const itemindex = this.projects.findIndex(
+        (p) => p.id === projectObject.id
+      );
+      // replace the object with new object in proper index
+      this.projects[itemindex] = projectObject;
+      // push to db.json
+      axios
+        .patch(`http://localhost:3000/projects/${projectObject.id}`, {
+          ...projectObject,
+        })
         .catch((err) => console.log(err));
       // re route to project list
       this.$router.push({ name: "projectlist" });

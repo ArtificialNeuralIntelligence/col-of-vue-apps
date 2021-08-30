@@ -4,7 +4,7 @@
       <h3 @click="showDesc = !showDesc">{{ project.title }}</h3>
       - <small>{{ project.projectType }}</small>
       <div class="icons">
-        <span class="material-icons">edit</span>
+        <span class="material-icons" @click="handleedit(project.id)">edit</span>
         <span class="material-icons" @click="handledelete(project.id)"
           >delete</span
         >
@@ -46,6 +46,9 @@ export default {
     },
     handledelete(id) {
       this.$emit("handledelete", id);
+    },
+    handleedit(id) {
+      this.$router.push({ name: "editproject", params: { id } });
     },
   },
 };
