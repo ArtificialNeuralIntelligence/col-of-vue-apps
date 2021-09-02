@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import NotFound from "../views/NotFound.vue";
+import Details from "../views/Details.vue";
+import CreateForm from "../views/CreateForm.vue";
 
 const routes = [
   {
@@ -12,6 +14,17 @@ const routes = [
     path: "/:catchALL(.*)",
     name: "NotFound",
     component: NotFound,
+  },
+  {
+    path: "/post/:id",
+    name: "Details",
+    component: Details,
+    props: true,
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: CreateForm,
   },
 ];
 

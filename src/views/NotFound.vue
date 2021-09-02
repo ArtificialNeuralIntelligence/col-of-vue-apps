@@ -6,11 +6,13 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 export default {
   name: "NotFound",
   setup() {
+    const router = useRouter();
     const goHome = () => {
-      this.$router.push({ name: "Home" });
+      router.push({ name: "Home" });
     };
     return { goHome };
   },

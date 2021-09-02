@@ -1,17 +1,27 @@
 <template>
   <div class="home">
-    <HelloWorld msg="A clean slate for vue development" />
+    <post-lists />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PostLists from "@/components/PostLists.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    PostLists,
+  },
+  setup() {
+    return {};
   },
 };
 </script>
+
+<style lang="css" scoped>
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style>
