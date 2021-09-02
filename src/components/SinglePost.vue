@@ -5,7 +5,11 @@
     >
 
     <p>{{ snippet }}</p>
-    <span v-for="tag in post.tags" :key="tag"> #{{ tag }} </span>
+    <span v-for="tag in post.tags" :key="tag" class="pill">
+      <router-link :to="{ name: 'Tag', params: { tag: tag } }"
+        >#{{ tag }}
+      </router-link>
+    </span>
   </div>
 </template>
 
@@ -54,5 +58,18 @@ export default {
   padding-right: 40px;
   left: -30px;
   transform: rotateZ(-1deg);
+}
+.pill {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  color: #444;
+  background: #ddd;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.pill a {
+  text-decoration: none;
+  color: rgb(206, 104, 45);
 }
 </style>

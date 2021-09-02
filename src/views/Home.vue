@@ -1,11 +1,12 @@
 <template>
   <div class="home">
-    <post-lists />
+    <post-lists :posts="posts" :error="error" />
   </div>
 </template>
 
 <script>
 import PostLists from "@/components/PostLists.vue";
+import getPosts from "../composables/getPosts";
 
 export default {
   name: "Home",
@@ -13,7 +14,9 @@ export default {
     PostLists,
   },
   setup() {
-    return {};
+    const { posts, error, load } = getPosts();
+    load();
+    return { posts, error };
   },
 };
 </script>

@@ -18,18 +18,23 @@
 <script>
 import SinglePost from "@/components/SinglePost.vue";
 import Spinner from "@/components/Spinner.vue";
-import getPosts from "../composables/getPosts";
+
 export default {
   name: "PostLists",
   components: {
     SinglePost,
     Spinner,
   },
-  setup() {
-    const { posts, error, load } = getPosts();
-    load();
-    return { posts, error };
+  props: {
+    posts: {
+      type: Array,
+      default: null,
+    },
+    error: {
+      type: String,
+    },
   },
+  setup() {},
 };
 </script>
 
