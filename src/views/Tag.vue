@@ -1,16 +1,19 @@
 <template>
   <post-lists :posts="refinedPosts" :error="error"></post-lists>
+  <tag-cloud :posts="posts"></tag-cloud>
 </template>
 
 <script>
 import { computed } from "vue";
 import PostLists from "@/components/PostLists.vue";
 import getPosts from "../composables/getPosts";
+import TagCloud from "@/components/TagCloud.vue";
 
 export default {
   name: "Tag",
   components: {
     PostLists,
+    TagCloud,
   },
   props: {
     tag: {
@@ -28,7 +31,7 @@ export default {
     });
     //
     console.log(refinedPosts);
-    return { refinedPosts, error };
+    return { refinedPosts, error, posts };
   },
 };
 </script>

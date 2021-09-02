@@ -31,46 +31,12 @@
       ]
     },
     {
-      "title": "A new blog post",
-      "body": "A newer blog post done from web from and using fetch api along with parsing json data stringify. Good for warm up ",
+      "title": "Vue todo app",
+      "body": "Some gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerishSome gibeerish",
       "tags": [
-        "news",
-        "automation"
-      ],
-      "id": 4
-    },
-    {
-      "title": "Another post",
-      "body": "lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem ",
-      "tags": [
-        "gibberish"
-      ],
-      "id": 5
-    },
-    {
-      "title": "Another post",
-      "body": "lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem lroem ipsum dolorem ",
-      "tags": [
-        "gibberish"
-      ],
-      "id": 6
-    },
-    {
-      "title": "Asiana",
-      "body": "const router = useRouter();const router = useRouter();const router = useRouter();const router = useRouter();const router = useRouter();const router = useRouter();const router = useRouter();const router = useRouter();",
-      "tags": [
-        "automated"
-      ],
-      "id": 7
-    },
-    {
-      "title": "Few more blogs",
-      "body": "TagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTag TagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTagTag",
-      "tags": [
-        "ethereum",
         "web"
       ],
-      "id": 8
+      "id": 4
     }
   ]
 }
