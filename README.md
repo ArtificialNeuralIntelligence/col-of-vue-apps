@@ -7,6 +7,7 @@
   - [App-< NAME >](#app--name-)
 - [:briefcase: Available Apps](#briefcase-available-apps)
   - [app-todo-legacy](#app-todo-legacy)
+  - [app-composition-blog](#app-composition-blog)
 
 
 ## :mega: General guides
@@ -50,5 +51,8 @@ $ npm run serve
 ## :briefcase: Available Apps
 ### app-todo-legacy
 **Branch name:** `app-todo-legacy`
+
+### app-composition-blog
+**Branch name:** `app-composition-blog`
 
 **Desciption:** A project listing todo app where you can create new project and track it until completion. For more see the branch `reamdme`
