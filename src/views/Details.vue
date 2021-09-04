@@ -7,6 +7,7 @@
     <div v-if="post" class="post">
       <h3>{{ post.title }}</h3>
       <p class="pre">{{ post.body }}</p>
+      <button @click="handleDelete">Delete this post</button>
     </div>
 
     <div v-else>
@@ -19,6 +20,7 @@
 <script>
 import Spinner from "@/components/Spinner.vue";
 import getPost from "../composables/getPost";
+import deletePost from "../composables/deletePost";
 export default {
   name: "Details",
   props: {
@@ -30,9 +32,10 @@ export default {
     Spinner,
   },
   setup(props) {
+    const { handleDelete } = deletePost(props.id);
     const { post, error, load } = getPost(props.id);
     load();
-    return { post, error };
+    return { post, error, handleDelete };
   },
 };
 </script>
@@ -49,5 +52,14 @@ export default {
 }
 .pre {
   white-space: pre-wrap;
+}
+button {
+  margin-top: 30px;
+  background: #ff8800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  cursor: pointer;
 }
 </style>

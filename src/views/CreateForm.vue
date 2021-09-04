@@ -78,6 +78,7 @@ button {
   border: none;
   padding: 8px 16px;
   font-size: 18px;
+  cursor: pointer;
 }
 .pill {
   display: inline-block;

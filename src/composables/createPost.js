@@ -1,27 +1,23 @@
+// import { addDoc, collection } from "@firebase/firestore";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { db, timestamp } from "../firebase/config";
+import { collection, addDoc } from "firebase/firestore";
 
 const createPost = () => {
   const formsdata = ref({ title: "", content: "", tag: "", tags: [] });
   const router = useRouter();
   const handleSubmit = async () => {
-    // create the post object
+    // post the data to api
     const p = {
       title: formsdata.value.title,
       body: formsdata.value.content,
       tags: formsdata.value.tags,
+      createdAt: timestamp,
     };
-    // post the data to api
-    await fetch("http://localhost:3000/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(p),
-    });
+    await addDoc(collection(db, "posts"), p);
 
     //re route to home
-
     router.push({ name: "Home" });
   };
   const handletag = () => {

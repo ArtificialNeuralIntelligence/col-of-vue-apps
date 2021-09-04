@@ -1,4 +1,6 @@
 import { ref } from "vue";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "../firebase/config";
 
 const getPosts = () => {
   const posts = ref([]);
@@ -7,17 +9,17 @@ const getPosts = () => {
   const load = async () => {
     try {
       //Simulate delay
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, 2000);
+      // await new Promise((resolve) => {
+      //   setTimeout(() => {
+      //     resolve();
+      //   }, 2000);
+      // });
+      const snaps = await getDocs(
+        query(collection(db, "posts"), orderBy("createdAt", "desc"))
+      );
+      posts.value = snaps.docs.map((doc) => {
+        return { ...doc.data(), id: doc.id };
       });
-
-      const resp = await fetch("http://localhost:3000/posts");
-      if (!resp.ok) {
-        throw Error("data not found");
-      }
-      posts.value = await resp.json();
     } catch (err) {
       error.value = err.message;
     }
